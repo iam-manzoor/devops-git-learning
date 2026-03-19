@@ -92,5 +92,8 @@ git push
 
 ### git rebase
 - squash: Merge multiple commits into single commit.
+`git rebase -i commit-id` Multiple commits into single commit
 
-
+### git reorder
+- We can correct the commit order. pick the commit before the commits you want to correct.
+`git rebase -i  <commit-hash>` cut and paste the commit msg in the order you want.
