@@ -97,3 +97,16 @@ git push
 ### git reorder
 - We can correct the commit order. pick the commit before the commits you want to correct.
 `git rebase -i  <commit-hash>` cut and paste the commit msg in the order you want.
+
+### Drop
+- Drop the bad commit. Opens in a editor and choose appropirate option
+` git rebase -i <commit before the bad commit>`
+
+### exec
+- execute the command before and after the rebase
+`git rebase -i <commit hash>`
+
+### Git Bisect
+- bisect works using binary search
+- git bisect identify the git commit which introiduced the bug in the repository.
+`git bisect bad` - `git bisect good <commit>`
