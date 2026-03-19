@@ -63,10 +63,34 @@ Clone -> Making copy of the repo into your local machine.
 - Pull  - its a combination of git fetch and git merge/rebase
 
 ### Git Reset
+- Add the feature files from 1-5 and test it
 - When we want to undo the changes we use `git reset`
 - `--sot` `--mixed` `--hard`
+- Default is `--mixed` When you use `--mixed` it puts the file out of staging area
+- `git reset --mixed 40b0188` (In my case it bring back the deleted file)
+- `git restore file-name` to restore the file
+- `git reset --soft` Puts the file in the staging area.
+- `git reset --hard` Remove/Delete the file from the local as well as the history.
+
+### Git Amend
+- club multiple commits into single commit no need to make multiple commits
+- Use `git commit --amend ` opens the last commit either you can add the comments or update the existing commit. New commit can also be the part of existing commit.
 
 
+### Git Cherry Pick
+- Pick particular commit and integrate it with our feature branch.
+- B1 f1.txt f2.txt f4.txt. B2 f1.txt f2.txt f3.txt
+- Taking f3.txt from B2 to B1
+- Picking changes from one branch to another brnach is called cherry picking.
+```
+git checkout feature/branch2
+git log --oneline (pick the commit msg)
+git checkout feature/branch1
+git cherry-pick <commit hash>
+git push
+```
 
+### git rebase
+- squash: Merge multiple commits into single commit.
 
 
